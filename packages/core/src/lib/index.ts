@@ -18,6 +18,7 @@ export async function AuthInternal<
   request: RequestInternal,
   authOptions: AuthConfig
 ): Promise<ResponseInternal<Body>> {
+  console.log("hej");
   const { action, providerId, error, method } = request
 
   const csrfDisabled = authOptions.skipCSRFCheck === skipCSRFCheck
